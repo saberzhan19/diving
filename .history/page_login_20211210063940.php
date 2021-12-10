@@ -1,7 +1,6 @@
 <?php
 session_start();
-require "functions.php";
-
+var_dump($)
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +39,7 @@ require "functions.php";
         </div>
         <div class="card p-4 border-top-left-radius-0 border-top-right-radius-0">
            
-                <?php echo set_flash_message("success", "Регистрация успешна");?>                
+                    <?php echo set_flash_message("success", "Регистрация успешна");?>                
                 
 
             <form action="login.php">

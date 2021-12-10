@@ -1,6 +1,5 @@
 <?php
 session_start();
-require "functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -65,8 +64,17 @@ require "functions.php";
                             <div class="col-xl-6 ml-auto mr-auto">
                                 <div class="card p-4 rounded-plus bg-faded">
                                     
-                                    <?php echo display_flash_message("danger");?>
-                                                                                                   
+                                <?php if(isset($_SESSION["danger"])):?>                                    
+                                    <div class="alert alert-danger text-dark" role="alert">
+                                        <?php echo display_flash_message("danger");?>
+                                    </div>
+                                <?php endif;?>
+                                
+                                <?php if(isset($_SESSION["success"])):?>                                    
+                                    <div class="alert alert-success text-dark" role="alert">
+                                        <?php echo display_flash_message("success");?>
+                                    </div>
+                                <?php endif;?>
 
                                     <!-- <div class="alert alert-danger text-dark" role="alert">
                                         <strong>Уведомление!</strong> 

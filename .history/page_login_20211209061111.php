@@ -1,7 +1,6 @@
 <?php
 session_start();
-require "functions.php";
-
+require "f.php";
 ?>
 
 <!DOCTYPE html>
@@ -39,18 +38,19 @@ require "functions.php";
             </a>
         </div>
         <div class="card p-4 border-top-left-radius-0 border-top-right-radius-0">
-           
-                <?php echo set_flash_message("success", "Регистрация успешна");?>                
-                
-
-            <form action="login.php">
+            <div class="alert alert-success">
+            
+            <?php echo set_flash_message("success", "Регистрация успешна");?>    
+            
+            </div>
+            <form action="">
                 <div class="form-group">
                     <label class="form-label" for="username">Email</label>
-                    <input type="email" name="email" id="username" class="form-control" placeholder="Эл. адрес" value="">
+                    <input type="email" id="username" class="form-control" placeholder="Эл. адрес" value="">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="password">Пароль</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="" >
+                    <input type="password" id="password" class="form-control" placeholder="" >
                 </div>
                 <div class="form-group text-left">
                     <div class="custom-control custom-checkbox">

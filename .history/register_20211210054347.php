@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require "functions.php";
 
 $email = $_POST["email"];
@@ -18,4 +19,4 @@ add_user($email, $password);
 
 set_flash_message("success", "Регистрация успешна");
 
-redirect_to("page_login.php");
+redirect_to("/page_login.php");

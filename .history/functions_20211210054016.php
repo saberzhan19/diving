@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function get_user_by_email( $email ) {
 

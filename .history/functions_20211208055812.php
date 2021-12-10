@@ -1,5 +1,6 @@
 <?php
 
+
 function get_user_by_email( $email ) {
 
     $email = $_SESSION["email"];
@@ -7,15 +8,16 @@ function get_user_by_email( $email ) {
 
     $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
 
-    $sql = "SELECT * FROM diving WHERE email = :email";
+    $sql = "SELECT * FROM dive WHERE email = :email AND password = :password";
     
     $statement = $pdo->prepare($sql);
     $statement->execute([
                 "email" => $email,
+                "password" => password_hash($password, PASSWORD_DEFAULT)
             ]);
-    $diving = $statement->fetch(PDO::FETCH_ASSOC);
+    $users = $statement->fetch(PDO::FETCH_ASSOC);
 
-    return $diving;
+    return $dive;
     
 };
 
@@ -23,13 +25,13 @@ function add_user($email, $password) {
     
     $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
 
-    $sql = "INSERT INTO diving (email, password) VALUES (:email, :password)";
+    $sql = "INSERT INTO dive (email, password) VALUES (:email, :password)";
     // подготавлеваем запрос
     $statement = $pdo->prepare($sql);
     // выполнениям запрос
     $statement->execute([
-         "email" => $email,    
-         "password" => password_hash($password, PASSWORD_DEFAULT)
+    "email" => $email,    
+    "password" => password_hash($password, PASSWORD_DEFAULT)
     ]);
 
 };

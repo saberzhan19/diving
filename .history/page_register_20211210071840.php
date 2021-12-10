@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "functions.php";
+// require "functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ require "functions.php";
                             <div class="col-xl-6 ml-auto mr-auto">
                                 <div class="card p-4 rounded-plus bg-faded">
                                     
-                                    <?php echo display_flash_message("danger");?>
+                                    
                                                                                                    
 
                                     <!-- <div class="alert alert-danger text-dark" role="alert">
@@ -78,6 +78,7 @@ require "functions.php";
                                             <div class="invalid-feedback">Заполните поле.</div>
                                             <div class="help-block">Эл. адрес будет вашим логином при авторизации</div>
                                         </div>
+                                        <?php echo display_flash_message("danger");?>
                                         <div class="form-group">
                                             <label class="form-label" for="userpassword">Пароль <br></label>
                                             <input type="password" name="password" id="userpassword" class="form-control" placeholder="Введите пароль" pattern="^[a-z0-9_.-]{3,}+$" required>

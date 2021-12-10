@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function get_user_by_email( $email ) {
 
@@ -7,11 +8,12 @@ function get_user_by_email( $email ) {
 
     $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
 
-    $sql = "SELECT * FROM diving WHERE email = :email";
+    $sql = "SELECT * FROM diving WHERE email = :email AND password = :password";
     
     $statement = $pdo->prepare($sql);
     $statement->execute([
                 "email" => $email,
+                "password" => password_hash($password, PASSWORD_DEFAULT)
             ]);
     $diving = $statement->fetch(PDO::FETCH_ASSOC);
 

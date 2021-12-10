@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "functions.php";
+// require "functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ require "functions.php";
                             <div class="col-xl-6 ml-auto mr-auto">
                                 <div class="card p-4 rounded-plus bg-faded">
                                     
-                                    <?php echo display_flash_message("danger");?>
+                                    
                                                                                                    
 
                                     <!-- <div class="alert alert-danger text-dark" role="alert">
