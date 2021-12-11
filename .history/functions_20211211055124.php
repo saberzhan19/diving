@@ -19,18 +19,6 @@ function get_user_by_email( $email ) {
     
 };
 
-function set_flash_message($name, $message) {
-    
-    $_SESSION[$name] = $message;   
-
-};
-
-function redirect_to($path) {
-    header("Location: {$path}");
-    exit;
-};
-
-
 function add_user($email, $password) {
     
     $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
@@ -44,16 +32,23 @@ function add_user($email, $password) {
          "password" => password_hash($password, PASSWORD_DEFAULT)
     ]);
 
-    return $pdo->lastInsertId();
-
 };
 
+function set_flash_message($name, $message) {
+
+   echo $_SESSION[$name] = $message;   
+    // unset($_SESSION[$name]);
+};
 
 function display_flash_message($name) {
    
     if(isset($_SESSION["$name"]))
-        echo "<div class=\"alert alert-{$name} text-dark\" role=\"alert\">{$_SESSION[$name]}<div>" ;
+        echo "<div class='alert alert-{$name} text-dark\" role=\"alert\">{$_SESSION[$name]}<div>" ;
         unset($_SESSION["$name"]);
 
 };
 
+function redirect_to($path) {
+    header("Location: {$path}");
+    exit;
+};

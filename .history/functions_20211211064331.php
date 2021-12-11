@@ -30,7 +30,6 @@ function redirect_to($path) {
     exit;
 };
 
-
 function add_user($email, $password) {
     
     $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");

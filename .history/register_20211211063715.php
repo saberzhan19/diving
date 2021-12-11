@@ -1,6 +1,5 @@
 <?php
-
-session_start();
+session_start()
 require "functions.php";
 
 $email = $_POST["email"];

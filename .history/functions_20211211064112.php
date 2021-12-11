@@ -18,18 +18,11 @@ function get_user_by_email( $email ) {
     return $diving;
     
 };
-
 function set_flash_message($name, $message) {
-    
-    $_SESSION[$name] = $message;   
+
+   $_SESSION[$name] = $message;   
 
 };
-
-function redirect_to($path) {
-    header("Location: {$path}");
-    exit;
-};
-
 
 function add_user($email, $password) {
     
@@ -44,8 +37,6 @@ function add_user($email, $password) {
          "password" => password_hash($password, PASSWORD_DEFAULT)
     ]);
 
-    return $pdo->lastInsertId();
-
 };
 
 
@@ -57,3 +48,7 @@ function display_flash_message($name) {
 
 };
 
+function redirect_to($path) {
+    header("Location: {$path}");
+    exit;
+};

@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 require "functions.php";
 
 $email = $_POST["email"];
@@ -10,8 +9,8 @@ $diving = get_user_by_email($email);
 
 // если эл. адрес занят, то перенаправляем назад
 
-if(!empty($diving)){
-    set_flash_message("danger", "Этот эл. адрес уже занят другим пользователем.");
+if(isset($diving)){
+    echo set_flash_message("danger", "Этот эл. адрес уже занят другим пользователем.");
     redirect_to("page_register.php");
 }
 
