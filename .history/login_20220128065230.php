@@ -11,7 +11,6 @@ $students = login( $email, $password);
 if (!$students){
 
     redirect_to("page_login.php");
-
 }
     
 

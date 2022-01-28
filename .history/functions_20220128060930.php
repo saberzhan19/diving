@@ -53,35 +53,9 @@ function add_user($email, $password) {
 
 function display_flash_message($name) {
    
-    if(isset($_SESSION["$name"])){
-
-        echo "<div class=\"alert alert-{$name} text-dark\" role=\"alert\">{$_SESSION[$name]}</div>" ;
+    if(isset($_SESSION["$name"])){}
+        echo "<div class=\"alert alert-{$name} text-dark\" role=\"alert\">{$_SESSION[$name]}<div>" ;
         unset($_SESSION["$name"]);
-    }
 
 };
 
-
-function login ($email, $password){
-    $students = get_user_by_email($email);
-    if (empty($students)) {
-        set_flash_message('danger', 'такого пользователя не существует');
-        return false;
-    }
-    elseif(!check_password($students, $password)) {
-       set_flash_message('danger' ,'пароль не верный');
-       return false;
-    } else {
-        $_SESSION['email'] = $students['email'];
-        $_SESSION['id'] = $students['id'];
-        return true;
-    }
-}
-
-function check_password($students, $password){
-
-    if ($students['password'] == $password){
-        return true;
-    }
-    return false;
-}

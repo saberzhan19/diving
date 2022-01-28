@@ -63,22 +63,23 @@ function display_flash_message($name) {
 
 
 function login ($email, $password){
-    $students = get_user_by_email($email);
+    $user = get_user($email);
     if (empty($students)) {
         set_flash_message('danger', 'такого пользователя не существует');
         return false;
     }
-    elseif(!check_password($students, $password)) {
+    elseif(!chek_password($students, $password)) {
        set_flash_message('danger' ,'пароль не верный');
        return false;
     } else {
         $_SESSION['email'] = $students['email'];
-        $_SESSION['id'] = $students['id'];
+        $_SESSION['admin'] = $students['admin'];
+        $_SESSION['id'] = $user['id'];
         return true;
     }
 }
 
-function check_password($students, $password){
+function cheak_password($students, $password){
 
     if ($students['password'] == $password){
         return true;

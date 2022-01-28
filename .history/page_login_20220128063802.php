@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require "functions.php";
 
 ?>
@@ -46,10 +45,9 @@ require "functions.php";
                     <?php display_flash_message('success');
                             unset($_SESSION['success']); ?>                
                 <? endif;?>
-                
-                <? if(isset($_SESSION['danger'])):?>
-                    <?php display_flash_message('danger');
-                            unset($_SESSION['danger']); ?>                
+                <? if(isset($_SESSION['success'])):?>
+                    <?php display_flash_message('success');
+                            unset($_SESSION['success']); ?>                
                 <? endif;?>
            
                 

@@ -63,7 +63,7 @@ function display_flash_message($name) {
 
 
 function login ($email, $password){
-    $students = get_user_by_email($email);
+    $user = get_user_($email);
     if (empty($students)) {
         set_flash_message('danger', 'такого пользователя не существует');
         return false;
@@ -73,7 +73,7 @@ function login ($email, $password){
        return false;
     } else {
         $_SESSION['email'] = $students['email'];
-        $_SESSION['id'] = $students['id'];
+        $_SESSION['id'] = $user['id'];
         return true;
     }
 }

@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require "functions.php";
 
 ?>
@@ -39,20 +38,17 @@ require "functions.php";
                 <i class="fal fa-angle-down d-inline-block ml-1 fs-lg color-primary-300"></i>
             </a>
         </div>
-        
         <div class="card p-4 border-top-left-radius-0 border-top-right-radius-0">
            
                 <? if(isset($_SESSION['success'])):?>
                     <?php display_flash_message('success');
                             unset($_SESSION['success']); ?>                
                 <? endif;?>
-                
+           
                 <? if(isset($_SESSION['danger'])):?>
                     <?php display_flash_message('danger');
                             unset($_SESSION['danger']); ?>                
                 <? endif;?>
-           
-                
 
             <form action="login.php" method="post">
                 <div class="form-group">
@@ -73,7 +69,7 @@ require "functions.php";
             </form>
 
         </div>
-
+        
         <div class="blankpage-footer text-center">
             Нет аккаунта? <a href="page_register.php"><strong>Зарегистрироваться</strong>
         </div>

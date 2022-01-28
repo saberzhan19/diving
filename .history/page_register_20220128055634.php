@@ -65,7 +65,7 @@ require "functions.php";
                             <div class="col-xl-6 ml-auto mr-auto">
                                 <div class="card p-4 rounded-plus bg-faded">
                                     
-                                                                                                                            
+                                                                                                                             
                                     
                                     <? if(isset($_SESSION['danger'])) :?>
                                         

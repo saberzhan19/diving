@@ -63,7 +63,7 @@ function display_flash_message($name) {
 
 
 function login ($email, $password){
-    $students = get_user_by_email($email);
+    $diving = get_user_by_email($email);
     if (empty($students)) {
         set_flash_message('danger', 'такого пользователя не существует');
         return false;

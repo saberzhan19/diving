@@ -65,7 +65,12 @@ require "functions.php";
                             <div class="col-xl-6 ml-auto mr-auto">
                                 <div class="card p-4 rounded-plus bg-faded">
                                     
-                                                                                                                            
+                                    <? if(isset($_SESSION['success'])) :?>
+                                        
+                                        <?php display_flash_message('success');
+                                              unset($_SESSION['success']);  ?>
+                                              
+                                    <? endif;?>                                                                                                   
                                     
                                     <? if(isset($_SESSION['danger'])) :?>
                                         
@@ -78,13 +83,13 @@ require "functions.php";
                                     <form id="js-login" novalidate="" action="register.php" method="post">
                                         <div class="form-group">
                                             <label class="form-label" for="emailverify">Email</label>
-                                            <input type="email" name="email" id="emailverify" class="form-control" placeholder="Эл. адрес" pattern="([a-z0-9_.-]{3,})@([a-z]{3,6})\.([a-z]{2,4})" required />
+                                            <input type="email" name="email" id="emailverify" class="form-control" placeholder="Эл. адрес" pattern="[a-z0-9_.-]{3,}@[a-z]{3,9}.[a-z]{2,6}" required>
                                             <div class="invalid-feedback">Заполните поле.</div>
                                             <div class="help-block">Эл. адрес будет вашим логином при авторизации</div>
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label" for="userpassword">Пароль <br></label>
-                                            <input type="password" name="password" id="userpassword" class="form-control" placeholder="Введите пароль" pattern="(^[a-z0-9_.-]{3,}+$)" required/>
+                                            <input type="password" name="password" id="userpassword" class="form-control" placeholder="Введите пароль" pattern="^[a-z0-9_.-]{3,}+$" required>
                                             <div class="invalid-feedback">Заполните поле.</div>
                                         </div>
                                        

@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require "functions.php";
 
 ?>
@@ -46,13 +45,11 @@ require "functions.php";
                     <?php display_flash_message('success');
                             unset($_SESSION['success']); ?>                
                 <? endif;?>
-                
+           
                 <? if(isset($_SESSION['danger'])):?>
                     <?php display_flash_message('danger');
                             unset($_SESSION['danger']); ?>                
                 <? endif;?>
-           
-                
 
             <form action="login.php" method="post">
                 <div class="form-group">
