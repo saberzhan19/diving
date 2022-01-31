@@ -73,8 +73,6 @@ function login ($email, $password){
        return false;
     }
 
-    $_SESSION['user'] = $students;
-
-    return true;
+    $_SESSION['students'] = 
 }
 

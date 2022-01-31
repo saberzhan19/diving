@@ -15,4 +15,6 @@ if (!$students){
 }
     
 
+add_user($email, $password);
+
 redirect_to("page_students.php");

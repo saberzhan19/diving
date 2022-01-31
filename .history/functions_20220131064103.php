@@ -72,9 +72,6 @@ function login ($email, $password){
        set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
        return false;
     }
-
-    $_SESSION['user'] = $students;
-
-    return true;
+    $_SESSION['students'] = $students;
 }
 

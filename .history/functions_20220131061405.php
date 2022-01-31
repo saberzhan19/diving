@@ -65,7 +65,7 @@ function display_flash_message($name) {
 function login ($email, $password){
     $students = get_user_by_email($email);
     if (!$students) {
-        set_flash_message('danger', '<strong>Внимание!</strong> Такого пользователя не существует');
+        set_flash_message('danger', '<strong>Внимание!</strong>акого пользователя не существует');
         return false;
     }
     if( $password != $students['password']) {
@@ -73,8 +73,6 @@ function login ($email, $password){
        return false;
     }
 
-    $_SESSION['user'] = $students;
 
-    return true;
 }
 

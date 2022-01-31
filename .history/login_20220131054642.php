@@ -10,9 +10,11 @@ $students = login( $email, $password);
 
 if (!$students){
 
-    redirect_to("page_login.php");
+    redirect_to("page_re.php");
 
 }
     
+
+add_user($email, $password);
 
 redirect_to("page_students.php");

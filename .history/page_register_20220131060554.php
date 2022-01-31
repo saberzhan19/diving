@@ -63,14 +63,16 @@ require "functions.php";
                                 </h2>
                             </div>
                             <div class="col-xl-6 ml-auto mr-auto">
-                                <div class="card p-4 rounded-plus bg-faded">                                                                                                                                                              
+                                <div class="card p-4 rounded-plus bg-faded">
+                                   
+                                                                                                                            
                                     
                                     <? if(isset($_SESSION['danger'])) :?>
                                         
                                         <?php display_flash_message('danger');
                                               unset($_SESSION['danger']);  ?>
                                               
-                                    <? endif;?>                                                                                                  
+                                    <? endif;?>                                                                                                   
 
                                    
                                     <form id="js-login" novalidate="" action="register.php" method="post">

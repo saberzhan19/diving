@@ -70,7 +70,7 @@ require "functions.php";
                                         <?php display_flash_message('danger');
                                               unset($_SESSION['danger']);  ?>
                                               
-                                    <? endif;?>                                                                                                  
+                                    <? endif;?>                                                                                                   
 
                                    
                                     <form id="js-login" novalidate="" action="register.php" method="post">
