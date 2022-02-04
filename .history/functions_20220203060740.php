@@ -15,9 +15,9 @@ function get_user_by_email( $email ) {
     $statement->execute([
                 "email" => $email,
             ]);
-    $students = $statement->fetch(PDO::FETCH_ASSOC);
+    $diving = $statement->fetch(PDO::FETCH_ASSOC);
 
-    return $students;
+    return $diving;
     
 };
 

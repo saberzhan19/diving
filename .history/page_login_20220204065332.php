@@ -77,7 +77,7 @@ require "functions.php";
         <div class="blankpage-footer text-center">
             Нет аккаунта? <a href="page_register.php"><strong>Зарегистрироваться</strong>
             <a href="http://rahimain/diving/">
-                <span style="color:black;">
+                <span style="color:a;">
                     To main
                 </span>    
             </a>

@@ -77,10 +77,8 @@ require "functions.php";
         <div class="blankpage-footer text-center">
             Нет аккаунта? <a href="page_register.php"><strong>Зарегистрироваться</strong>
             <a href="http://rahimain/diving/">
-                <span style="color:black;">
-                    To main
-                </span>    
-            </a>
+            <span style=""></span>    
+            To main</a>
         </div>
     </div>
     <video poster="img/backgrounds/clouds.png" id="bgvid" playsinline autoplay muted loop>

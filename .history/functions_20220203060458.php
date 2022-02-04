@@ -15,9 +15,9 @@ function get_user_by_email( $email ) {
     $statement->execute([
                 "email" => $email,
             ]);
-    $students = $statement->fetch(PDO::FETCH_ASSOC);
+    $diving = $statement->fetch(PDO::FETCH_ASSOC);
 
-    return $students;
+    return $diving;
     
 };
 
@@ -71,15 +71,12 @@ function login ($email, $password){
         return false;
     }
     
-    // if( $password != $students['password']) {
-    //     set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
-    //     return false;
-    //  }
-    
-     if(!password_verify($password, $students['password'])) {
+    if( $password != $students['password']) {
         set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
         return false;
      }
+    
+     if(!)
      
 
      $_SESSION['diving'] = $students;

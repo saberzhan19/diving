@@ -47,10 +47,10 @@ require "functions.php";
                             Войти
                         </a>
                         <a href="http://rahimain/diving/" class="btn-link text-white ml-auto ml-sm-0">&ensp;
-                            <span style="color:black;">
-                                To main
-                            </span>    
-                        </a>
+                        <span>
+                            
+                        </span>    
+                        To main</a>
 
                     </div>
                 </div>

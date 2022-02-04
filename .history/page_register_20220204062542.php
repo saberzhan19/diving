@@ -46,11 +46,7 @@ require "functions.php";
                         <a href="page_login.php" class="btn-link text-white ml-auto ml-sm-0">
                             Войти
                         </a>
-                        <a href="http://rahimain/diving/" class="btn-link text-white ml-auto ml-sm-0">&ensp;
-                            <span style="color:black;">
-                                To main
-                            </span>    
-                        </a>
+                        <a href="http://rahimain/diving/"> To main</a>
 
                     </div>
                 </div>

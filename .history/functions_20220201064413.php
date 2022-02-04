@@ -15,9 +15,9 @@ function get_user_by_email( $email ) {
     $statement->execute([
                 "email" => $email,
             ]);
-    $students = $statement->fetch(PDO::FETCH_ASSOC);
+    $diving = $statement->fetch(PDO::FETCH_ASSOC);
 
-    return $students;
+    return $diving;
     
 };
 
@@ -62,29 +62,19 @@ function display_flash_message($name) {
 };
 
 
-function login ($email, $password){
-
+function login ($email, $hash){
     $students = get_user_by_email($email);
-
     if (!$students) {
         set_flash_message('danger', '<strong>Внимание!</strong> Такого пользователя не существует');
         return false;
     }
-    
-    // if( $password != $students['password']) {
-    //     set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
-    //     return false;
-    //  }
-    
-     if(!password_verify($password, $students['password'])) {
-        set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
-        return false;
-     }
-     
+    if( $hash != $students['password']) {
+       set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
+       return false;
+    }
 
-     $_SESSION['diving'] = $students;
-    
-     return true;
-        
+    $_SESSION['diving'] = $students;
+
+    return true;
 }
 
