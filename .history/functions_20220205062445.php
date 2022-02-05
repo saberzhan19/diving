@@ -62,7 +62,7 @@ function display_flash_message($name) {
 };
 
 
-function login ($email, $hash){
+function login ($email, $has){
 
     $students = get_user_by_email($email);
 

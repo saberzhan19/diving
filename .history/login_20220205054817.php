@@ -5,9 +5,9 @@ require "functions.php";
 
 $email = $_POST["email"];
 $password = $_POST["password"];
-$hash = password_hash($password, PASSWORD_DEFAULT);
+$hash = password_hash($password, PASSWORD_DEFAULT)
 
-$students = login( $email, $hash);
+$students = login( $email, $password);
 
 if (!$students){
 

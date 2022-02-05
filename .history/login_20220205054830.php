@@ -7,7 +7,7 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 $hash = password_hash($password, PASSWORD_DEFAULT);
 
-$students = login( $email, $hash);
+$students = login( $email, $hashh);
 
 if (!$students){
 

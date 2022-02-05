@@ -62,7 +62,7 @@ function display_flash_message($name) {
 };
 
 
-function login ($email, $hash){
+function login ($email, $password){
 
     $students = get_user_by_email($email);
 
@@ -71,15 +71,15 @@ function login ($email, $hash){
         return false;
     }
     
-    if( $hash != $students) {
-        set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не правильный');
-        return false;
-     }
-    
-    //  if(!password_verify($password, $hash)) {
-    //     set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
+    // if( $password != $students['password']) {
+    //     set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не правильный');
     //     return false;
     //  }
+    
+     if(!password_verify($password, $hash)) {
+        set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
+        return false;
+     }
      
 
      $_SESSION['diving'] = $students;

@@ -62,7 +62,7 @@ function display_flash_message($name) {
 };
 
 
-function login ($email, $hash){
+function login ($email, $password){
 
     $students = get_user_by_email($email);
 
@@ -71,7 +71,7 @@ function login ($email, $hash){
         return false;
     }
     
-    if( $hash != $students) {
+    if( $hasg != $students) {
         set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не правильный');
         return false;
      }
