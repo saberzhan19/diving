@@ -13,7 +13,7 @@ function get_user_by_email( $email ) {
     
     $statement = $pdo->prepare($sql);
     $statement->execute([
-                "email" => $email
+                "email" => $email,
             ]);
     $students = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -62,28 +62,28 @@ function display_flash_message($name) {
 };
 
 
-function login ($email, $password){
+function login ($email, $hash){
 
-    $user = get_user_by_email($email);
+    $students = get_user_by_email($email);
 
-    if (!$user) {
+    if (!$students) {
         set_flash_message('danger', '<strong>Внимание!</strong> Такого пользователя не существует');
         return false;
     }
     
-    // внизу код не правильный ввиду того, что $hash - это строка, $students - это массив. Они всегда будут не правильными.
+    // внизу код не правильный ввиду того, что $hash $
     // if( $hash != $students) {
     //     set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не правильный');
     //     return false;
     //  }
     
-     if(!password_verify($password, $user['password'])) {
-        set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
-        return false;
-     }
+    //  if(!password_verify($password, $hash)) {
+    //     set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
+    //     return false;
+    //  }
      
 
-     $_SESSION['diving'] = $user;
+     $_SESSION['diving'] = $students;
     
      return true;
         

@@ -16,7 +16,7 @@ if(!empty($user)){
     redirect_to("page_register.php");exit();
 }
 
-add_user($email, $password);
+add_user($email, $pass);
 
 set_flash_message("success", "Регистрация успешна");
 

@@ -13,7 +13,8 @@ function get_user_by_email( $email ) {
     
     $statement = $pdo->prepare($sql);
     $statement->execute([
-                "email" => $email
+                "email" => $email,
+                ""
             ]);
     $students = $statement->fetch(PDO::FETCH_ASSOC);
 

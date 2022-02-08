@@ -13,7 +13,8 @@ function get_user_by_email( $email ) {
     
     $statement = $pdo->prepare($sql);
     $statement->execute([
-                "email" => $email
+                "email" => $email,
+                "password" => $password
             ]);
     $students = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -64,7 +65,7 @@ function display_flash_message($name) {
 
 function login ($email, $password){
 
-    $user = get_user_by_email($email);
+    $user = get_user_by_email($email, );
 
     if (!$user) {
         set_flash_message('danger', '<strong>Внимание!</strong> Такого пользователя не существует');

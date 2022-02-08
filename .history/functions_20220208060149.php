@@ -13,7 +13,7 @@ function get_user_by_email( $email ) {
     
     $statement = $pdo->prepare($sql);
     $statement->execute([
-                "email" => $email
+                "email" => $email,
             ]);
     $students = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -77,7 +77,7 @@ function login ($email, $password){
     //     return false;
     //  }
     
-     if(!password_verify($password, $user['password'])) {
+     if(!password_verify($password, $hash)) {
         set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
         return false;
      }

@@ -13,7 +13,7 @@ function get_user_by_email( $email ) {
     
     $statement = $pdo->prepare($sql);
     $statement->execute([
-                "email" => $email
+                "email" => $email,
             ]);
     $students = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -62,11 +62,11 @@ function display_flash_message($name) {
 };
 
 
-function login ($email, $password){
+function login ($email, $hash){
 
-    $user = get_user_by_email($email);
+    $s = get_user_by_email($email);
 
-    if (!$user) {
+    if (!$s) {
         set_flash_message('danger', '<strong>Внимание!</strong> Такого пользователя не существует');
         return false;
     }
@@ -77,13 +77,13 @@ function login ($email, $password){
     //     return false;
     //  }
     
-     if(!password_verify($password, $user['password'])) {
+     if(!password_verify($password, $hash)) {
         set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
         return false;
      }
      
 
-     $_SESSION['diving'] = $user;
+     $_SESSION['diving'] = $s;
     
      return true;
         
