@@ -10,11 +10,9 @@ $hash = password_hash($password, PASSWORD_DEFAULT);
 $user = login( $email, $password);
 
 if (!$user){
-// 7 - авторизация вернула false
+
     redirect_to("page_login.php");
 
 }
-// 11 - авторизация вернула true
-// 12 - перенаправление
+// 12 - перена
 redirect_to("page_students.php");
-

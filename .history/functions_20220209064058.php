@@ -21,7 +21,6 @@ function get_user_by_email( $email ) {
     
 };
 
-
 function set_flash_message($name, $message) {
     
     $_SESSION[$name] = $message;   
@@ -68,7 +67,7 @@ function login ($email, $password){
 
     $user = get_user_by_email($email);
 
-    //  3 - форма   Если:
+    //     Если:
     // 1. Нет такого Пользователя? 
     // 2. Хэш пароля не совпадает?
 
@@ -91,8 +90,9 @@ function login ($email, $password){
         return false;
      }
      
-     //  10 - возваращем true
+
      $_SESSION['diving'] = $user;
+    
      return true;
         
 }

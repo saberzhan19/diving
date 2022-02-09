@@ -91,8 +91,9 @@ function login ($email, $password){
         return false;
      }
      
-     //  10 - возваращем true
+// 6 - авторизация возвращает значение
      $_SESSION['diving'] = $user;
+    //  10 - возваращем true
      return true;
         
 }

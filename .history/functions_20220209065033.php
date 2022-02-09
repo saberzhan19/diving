@@ -20,8 +20,6 @@ function get_user_by_email( $email ) {
     return $students;
     
 };
-
-
 function set_flash_message($name, $message) {
     
     $_SESSION[$name] = $message;   
@@ -91,8 +89,9 @@ function login ($email, $password){
         return false;
      }
      
-     //  10 - возваращем true
+
      $_SESSION['diving'] = $user;
+    //  10 - возваращем true
      return true;
         
 }

@@ -91,8 +91,8 @@ function login ($email, $password){
         return false;
      }
      
-     //  10 - возваращем true
      $_SESSION['diving'] = $user;
+    //  10 - возваращем true
      return true;
         
 }

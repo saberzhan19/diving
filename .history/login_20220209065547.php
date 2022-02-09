@@ -14,7 +14,5 @@ if (!$user){
     redirect_to("page_login.php");
 
 }
-// 11 - авторизация вернула true
 // 12 - перенаправление
 redirect_to("page_students.php");
-

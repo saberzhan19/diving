@@ -17,11 +17,10 @@ if(!empty($user)){
     redirect_to("page_register.php");exit();
 }
 
-// 9 - Авторизация пользователя
-// 10 - возваращем true
+// Авторизация пользователя
 add_user($email, $password);
 
-// 6 - авторизация возвращает значение
+// 4 - форма. Формируем флеш сообщение
 set_flash_message("success", "Регистрация успешна");
 
 redirect_to("page_login.php");

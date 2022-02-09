@@ -21,7 +21,6 @@ function get_user_by_email( $email ) {
     
 };
 
-
 function set_flash_message($name, $message) {
     
     $_SESSION[$name] = $message;   
@@ -51,7 +50,7 @@ function add_user($email, $password) {
 
 };
 
-// по схеме авторизация, 2 - вызов функции авторизации
+// по схеме авторизация, 2 - вызов функции авторизацииzxvx
 
 function display_flash_message($name) {
    
@@ -67,10 +66,6 @@ function display_flash_message($name) {
 function login ($email, $password){
 
     $user = get_user_by_email($email);
-
-    //  3 - форма   Если:
-    // 1. Нет такого Пользователя? 
-    // 2. Хэш пароля не совпадает?
 
     if (!$user) {
         set_flash_message('danger', '<strong>Внимание!</strong> Такого пользователя не существует');
@@ -91,8 +86,9 @@ function login ($email, $password){
         return false;
      }
      
-     //  10 - возваращем true
+
      $_SESSION['diving'] = $user;
+    
      return true;
         
 }

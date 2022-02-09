@@ -42,7 +42,7 @@ require "functions.php";
         
         <div class="card p-4 border-top-left-radius-0 border-top-right-radius-0">
            
-                <!-- Это по схеме авторизация 1, 8 - форма -->
+                <!-- Это по схеме  -->
                 <? if(isset($_SESSION['success'])):?>
                     <?php display_flash_message('success');
                             unset($_SESSION['success']); ?>                
