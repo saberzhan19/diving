@@ -97,5 +97,10 @@ function login ($email, $password){
         
 }
 
+function is_not_logged_in() {
 
+    if(is_not_logged_in()){
+        redirect_to("page_login.php")
+    }
+}
 
