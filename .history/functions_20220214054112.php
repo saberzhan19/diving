@@ -59,17 +59,3 @@ function is_not_logged_in(){
     }
     return false;
 }
-
-function get_users()
-{
-    $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
-    $sql = "SELECT * FROM diving";
-
-    if($_SESSION['diving']['role'] == 1){
-        return $pdo->query($sql);
-    }else {
-        $sql .= ' WHERE id= :id';
-        $params = ['id' => $_SESSION['diving']['id']];
-        return query($sql, $params);
-    }
-}

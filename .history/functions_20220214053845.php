@@ -53,23 +53,17 @@ function redirect_to($path) {
     exit;
 };
 
+function is_not_logged_in() {
+    if(is_not_logged_in()){
+        redirect_to('page_login');
+    }
+
+    $users = get_users();
+}
+
 function is_not_logged_in(){
     if (!isset($_SESSION['diving'])){
         return true;
     }
-    return false;
-}
-
-function get_users()
-{
-    $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
-    $sql = "SELECT * FROM diving";
-
-    if($_SESSION['diving']['role'] == 1){
-        return $pdo->query($sql);
-    }else {
-        $sql .= ' WHERE id= :id';
-        $params = ['id' => $_SESSION['diving']['id']];
-        return query($sql, $params);
-    }
+    re
 }

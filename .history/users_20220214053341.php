@@ -1,11 +1,6 @@
 <?php
     session_start();
     require "functions.php";
-    if(is_not_logged_in()){
-        redirect_to('page_login');
-    }
-
-    $users = get_users();
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +53,7 @@
                 </div>
             <? endif;
             if (isset($_SESSION['danger'])) :?>
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger">
                     <span><? display_flash_message('danger') ?></span>
                 </div>
             <? endif;?>
