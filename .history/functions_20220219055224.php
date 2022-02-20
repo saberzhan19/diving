@@ -115,20 +115,5 @@ function create_user(array $params)
         return false;
     }
 
-    function create(string $table_name, array $params)
-    {
-        $fields = '';
-        $params2 = $params;
-        $keys = array_keys($params2);
-        $count = count($keys);
-        for ($i = 0; $i < $count; ++$i) {
-            $fields .=  ':' . $keys[$i];
-            if ($count - 1 != $i) {
-                $fields .=  ',';
-            }
-        }
-        $comma_separated = implode(",", $keys);
-        $sql = "INSERT INTO $table_name ($comma_separated) VALUES ($fields) ";
-        return query($sql, $params);
-    }
+    
 
