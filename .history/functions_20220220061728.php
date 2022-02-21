@@ -135,31 +135,15 @@ function create_user(array $params)
 function get_users()
 {
     $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
-    $sql = "SELECT * FROM diving";
+    $pdo = dbh();
+    $sql = "SELECT * FROM users";
 
-    if($_SESSION['diving']['role'] == 1){
+    if($_SESSION['user']['role'] == 1){
         return $pdo->query($sql);
     }else {
         $sql .= ' WHERE id= :id';
-        $params = ['id' => $_SESSION['diving']['id']];
+        $params = ['id' => $_SESSION['user']['id']];
         return query($sql, $params);
     }
-}
-function query(string $sql, array $params)
-{
-    $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
-    $stmt = $pdo->prepare($sql);
-    if (!empty($params)) {
-        foreach ($params as $key => $val) {
-            if (is_int($val)) {
-                $type = PDO::PARAM_INT;
-            } else {
-                $type = PDO::PARAM_STR;
-            }
-            $stmt->bindValue(':' . $key, $val, $type);
-        }
-    }
-    $stmt->execute();
-    return $stmt;
 }
 

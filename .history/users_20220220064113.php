@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     
-                    <? if($_SESSION['diving']['role'] == 1) : ?>
+                    <? if($_SESSION['people']['role'] == 1) : ?>
                         <a class="btn btn-success" href="create_user.html">Добавить</a>
                     <? endif;?>
 

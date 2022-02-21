@@ -5,7 +5,7 @@
         // redirect_to('page_login');
     }
 
-    $users = get_users();
+    $users = get_user_();
 ?>
 
 <!DOCTYPE html>
