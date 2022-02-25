@@ -46,11 +46,6 @@ require "functions.php";
                         <a href="page_login.html" class="btn-link text-white ml-auto ml-sm-0">
                             Войти
                         </a>
-                        <a href="http://rahimain/diving/" class="btn-link text-white ml-auto ml-sm-0">&ensp;
-                            <span style="color:black;">
-                                To main
-                            </span>    
-                        </a>
                     </div>
                 </div>
                 <div class="flex-1" style="background: url(img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
