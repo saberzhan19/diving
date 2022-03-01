@@ -39,13 +39,11 @@
 
         <main id="js-page-content" role="main" class="page-content mt-3">
             
-            <?php if(isset($_SESSION['success'])): ?>
-            <!-- <div class="alert alert-success"> -->
-                <? echo display_flash_message['success']; ?>
-                <!-- Профиль успешно обновлен. -->
-            <!-- </div> -->
-            <? endif;?>
-
+            <?php if(isset($_SESSION['success'])):
+            <div class="alert alert-success">
+                Профиль успешно обновлен.
+            </div>
+            
             <div class="subheader">
                 <h1 class="subheader-title">
                     <i class='subheader-icon fal fa-users'></i> Список пользователей
@@ -53,7 +51,7 @@
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <a class="btn btn-success" href="create_user.php">Добавить</a>
+                    <a class="btn btn-success" href="create_user.html">Добавить</a>
 
                     <div class="border-faded bg-faded p-3 mb-g d-flex mt-3">
                         <input type="text" id="js-filter-contacts" name="filter-contacts" class="form-control shadow-inset-2 form-control-lg" placeholder="Найти пользователя">
