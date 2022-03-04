@@ -116,4 +116,20 @@ function get_users()
         return query($sql, $params);
     }
 }
-
+function query(string $sql, array $params)
+{
+    $pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
+    $stmt = $pdo->prepare($sql);
+    if (!empty($params)) {
+        foreach ($params as $key => $val) {
+            if (is_int($val)) {
+                $type = PDO::PARAM_INT;
+            } else {
+                $type = PDO::PARAM_STR;
+            }
+            $stmt->bindValue(':' . $key, $val, $type);
+        }
+    }
+    $stmt->execute();
+    return $stmt;
+}

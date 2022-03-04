@@ -45,8 +45,9 @@
                 <!-- Профиль успешно обновлен. -->
             <!-- </div> -->
             <? endif;
-                if(isset($_SESSION['danger'])): ?>
-                <? echo display_flash_message['danger']; ?>
+            if(isset($_SESSION['success'])): ?>
+                <? echo display_flash_message['success']; ?>
+            <!-- </div> -->
             <? endif;?>
 
             <div class="subheader">
