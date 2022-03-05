@@ -6,6 +6,9 @@ include 'functions.php';
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
-if (is_not_logged_in()){
-    redirect_to("login.php");
+$login = is_not_logged_in($email);
+
+if (!$login) {
+    redirect_to("page_login.php");
 }
+redirect_to("users.php")

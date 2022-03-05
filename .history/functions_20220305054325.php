@@ -1,5 +1,7 @@
 <?php
 
+
+
 function get_user_by_email( $email ) {
 
     $email = $_POST["email"];
@@ -83,7 +85,7 @@ function login ($email, $password){
 }
 
 function is_not_logged_in() {
-    if(isset($_SESSION['people'])){
+    if(isset($_SESSION[''])){
         return true;
     }
     return false;

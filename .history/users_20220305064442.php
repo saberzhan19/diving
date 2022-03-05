@@ -58,9 +58,8 @@
                 <div class="col-xl-12">
 
                     <?php if(isset($_SESSION['admin'])): ?>
-                        <a class="btn btn-success" href="create_user.php">Добавить</a>
-                    <?php endif; ?>    
-                    
+                    <a class="btn btn-success" href="create_user.php">Добавить</a>
+                    <?php    
                     <div class="border-faded bg-faded p-3 mb-g d-flex mt-3">
                         <input type="text" id="js-filter-contacts" name="filter-contacts" class="form-control shadow-inset-2 form-control-lg" placeholder="Найти пользователя">
                         <div class="btn-group btn-group-lg btn-group-toggle hidden-lg-down ml-3" data-toggle="buttons">

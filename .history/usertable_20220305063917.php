@@ -7,5 +7,5 @@ $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
 if (is_not_logged_in()){
-    redirect_to("login.php");
+    redirect_to("login")
 }
