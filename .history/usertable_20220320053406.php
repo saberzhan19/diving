@@ -14,12 +14,5 @@ if(!user()){
     echo $_SESSION('admin');
 }
 
-$pdo = new PDO("mysql:host=localhost;dbname=rahimain", "root", "");
-
-$sql = "SELECT* FROM people";
-
-$statement = $pdo->prepare($sql);
-$statement->execute();
-$users = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 

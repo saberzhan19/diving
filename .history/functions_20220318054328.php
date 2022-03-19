@@ -115,3 +115,6 @@ function get_users()
     }
 }
 
+function admin(){
+    if(isset($_SESSION['admin'])){}
+}

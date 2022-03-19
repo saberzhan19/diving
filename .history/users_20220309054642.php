@@ -40,7 +40,10 @@
         <main id="js-page-content" role="main" class="page-content mt-3">
             
             <?php if(isset($_SESSION['success'])): ?>
+            <!-- <div class="alert alert-success"> -->
                 <? echo display_flash_message['success']; ?>
+                <!-- Профиль успешно обновлен. -->
+            <!-- </div> -->
             <? endif;
                 if(isset($_SESSION['danger'])): ?>
                 <? echo display_flash_message['danger']; ?>
@@ -101,7 +104,7 @@
                                         <? echo $user['username'] ?>
 
                                         <? if(isset($_SESSION['email'])): ?>
-                                            <? echo $_SESSION['admin']; ?>
+                                            <? echo $_SESSION[]
                                             <i class="fal fas fa-cog fa-fw d-inline-block ml-1 fs-md"></i>
                                             <i class="fal fa-angle-down d-inline-block ml-1 fs-md"></i>
                                         <? endif;?>    

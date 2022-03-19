@@ -51,7 +51,7 @@ require "functions.php";
                 <? if(isset($_SESSION['danger'])):?>
                     <?php display_flash_message('danger');
                             unset($_SESSION['danger']); ?>                
-                <? endif;?>       
+                <? endif;?>          
                 
 
             <form action="login.php" method="post">
@@ -61,7 +61,7 @@ require "functions.php";
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="password">Пароль</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="" required>
                 </div>
                 <div class="form-group text-left">
                     <div class="custom-control custom-checkbox">

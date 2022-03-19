@@ -20,6 +20,6 @@ $sql = "SELECT* FROM people";
 
 $statement = $pdo->prepare($sql);
 $statement->execute();
-$users = $statement->fetchAll(PDO::FETCH_ASSOC);
+$users = $statement->fetch(PDO::FETCH_ASSOC);
 
 

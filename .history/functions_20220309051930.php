@@ -72,10 +72,10 @@ function login ($email, $password){
     }
         
 
-    //  if(!password_verify($password, $user['password'])) {
-    //     set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
-    //     return false;
-    //  }
+     if(!password_verify($password, $user['password'])) {
+        set_flash_message('danger' ,'<strong>Внимание!</strong> Пароль не верный');
+        return false;
+     }
      
      $_SESSION['people'] = $user;
      return true;

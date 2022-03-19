@@ -40,7 +40,10 @@
         <main id="js-page-content" role="main" class="page-content mt-3">
             
             <?php if(isset($_SESSION['success'])): ?>
+            <!-- <div class="alert alert-success"> -->
                 <? echo display_flash_message['success']; ?>
+                <!-- Профиль успешно обновлен. -->
+            <!-- </div> -->
             <? endif;
                 if(isset($_SESSION['danger'])): ?>
                 <? echo display_flash_message['danger']; ?>
