@@ -14,6 +14,6 @@ if(!user()){
     echo $_SESSION('admin');
 }
 
-get_user_by_email( $email )
+
 
 

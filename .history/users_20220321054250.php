@@ -110,17 +110,17 @@
                                         <a class="dropdown-item" href="edit.html<? echo $user["id"] ?>">
                                             <i class="fa fa-edit"></i>
                                         Редактировать</a>
-                                        <a class="dropdown-item" href="security.html<? echo $user["id"] ?>">
+                                        <a class="dropdown-item" href="security.html">
                                             <i class="fa fa-lock"></i>
                                         Безопасность</a>
-                                        <a class="dropdown-item" href="status.html<? echo $user["id"] ?>">
+                                        <a class="dropdown-item" href="status.html">
                                             <i class="fa fa-sun"></i>
                                         Установить статус</a>
-                                        <a class="dropdown-item" href="media.html<? echo $user["id"] ?>">
+                                        <a class="dropdown-item" href="media.html">
                                             <i class="fa fa-camera"></i>
                                             Загрузить аватар
                                         </a>
-                                        <a href="<? echo $user["id"] ?>" class="dropdown-item" onclick="return confirm('are you sure?');">
+                                        <a href="#" class="dropdown-item" onclick="return confirm('are you sure?');">
                                             <i class="fa fa-window-close"></i>
                                             Удалить
                                         </a>
