@@ -107,7 +107,7 @@
                                         <? endif;?>    
                                     </a>
 
-                                    <!-- формат ссылок добавил снизу 'example.com/edit?id=X' -->
+                                    <!-- формат ссылок добавил снизу example.com/edit?id=X' -->
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="edit.html<? echo $user["id"] ?>">
                                             <i class="fa fa-edit"></i>

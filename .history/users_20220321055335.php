@@ -106,8 +106,7 @@
                                             <i class="fal fa-angle-down d-inline-block ml-1 fs-md"></i>
                                         <? endif;?>    
                                     </a>
-
-                                    <!-- формат ссылок добавил снизу 'example.com/edit?id=X' -->
+                                    <!-- формат ссылок добавил -->
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="edit.html<? echo $user["id"] ?>">
                                             <i class="fa fa-edit"></i>
