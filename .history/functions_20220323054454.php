@@ -82,21 +82,14 @@ function login ($email, $password){
         
 }
 
-function is_not_logged_in($email) {
-    if(isset($_SESSION['email'])){
+function is_not_logged_in() {
+    if(isset($_SESSION['people'])){
         return true;
     }
     return false;
 }
 
-function admin(){
-    if(isset($_SESSION['people'])){
-        return true;
-    }    
-    return false;
-}
-
-function create_user( $params)
+function create_user($params)
     {
         if(!empty($params['password']))
             $params['password'] = password_hash($params['password'], PASSWORD_DEFAULT);
@@ -122,3 +115,4 @@ function get_users()
     }
 }
 
+function admin()

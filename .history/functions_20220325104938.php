@@ -82,7 +82,7 @@ function login ($email, $password){
         
 }
 
-function is_not_logged_in($email) {
+function is_not_logged_in() {
     if(isset($_SESSION['email'])){
         return true;
     }
@@ -93,7 +93,7 @@ function admin(){
     if(isset($_SESSION['people'])){
         return true;
     }    
-    return false;
+    redirect_to("page_login.php");
 }
 
 function create_user( $params)

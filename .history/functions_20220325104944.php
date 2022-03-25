@@ -93,7 +93,7 @@ function admin(){
     if(isset($_SESSION['people'])){
         return true;
     }    
-    return false;
+    redirect_to("page_login.php");
 }
 
 function create_user( $params)

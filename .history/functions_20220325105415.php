@@ -93,7 +93,6 @@ function admin(){
     if(isset($_SESSION['people'])){
         return true;
     }    
-    return false;
 }
 
 function create_user( $params)

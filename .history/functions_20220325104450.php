@@ -82,18 +82,18 @@ function login ($email, $password){
         
 }
 
-function is_not_logged_in($email) {
-    if(isset($_SESSION['email'])){
+function is_not_logged_in() {
+    if(isset($_SESSION['people'])){
         return true;
     }
     return false;
 }
 
-function admin(){
-    if(isset($_SESSION['people'])){
+function admin($email){
+    if(isset($_SESSION['email'])){
         return true;
     }    
-    return false;
+    redirect_to("")
 }
 
 function create_user( $params)
