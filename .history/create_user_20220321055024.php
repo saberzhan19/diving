@@ -1,10 +1,3 @@
-<?php 
-    
-    session_start();
-    require "functions.php";
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +27,7 @@
                     <a class="nav-link" href="page_login.html">Войти</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Выйти</a>
+                    <a class="nav-link" href="#">Выйти</a>
                 </li>
             </ul>
         </div>
@@ -45,16 +38,10 @@
                 <i class='subheader-icon fal fa-plus-circle'></i> Добавить пользователя
             </h1>
 
-            <?php if(isset($_SESSION['danger'])): ?>
-                <? redirect_to("page_login.php"); ?>
-            <? endif;?>
 
-            <?php if(isset($_SESSION['success'])): ?>
-                <? echo display_flash_message['success']; ?>
-            <? endif;?>
 
         </div>
-        <form action="create_user.php" method="post">
+        <form action="">
             <div class="row">
                 <div class="col-xl-6">
                     <div id="panel-1" class="panel">

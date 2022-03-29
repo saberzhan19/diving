@@ -46,11 +46,11 @@
             </h1>
 
             <?php if(isset($_SESSION['danger'])): ?>
-                <? redirect_to("page_login.php"); ?>
+                <? echo display_flash_message['danger']; ?>
             <? endif;?>
 
-            <?php if(isset($_SESSION['success'])): ?>
-                <? echo display_flash_message['success']; ?>
+            <?php if(isset($_SESSION['danger'])): ?>
+                <? echo display_flash_message['danger']; ?>
             <? endif;?>
 
         </div>

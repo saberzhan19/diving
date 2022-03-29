@@ -46,11 +46,8 @@
             </h1>
 
             <?php if(isset($_SESSION['danger'])): ?>
-                <? redirect_to("page_login.php"); ?>
-            <? endif;?>
-
-            <?php if(isset($_SESSION['success'])): ?>
-                <? echo display_flash_message['success']; ?>
+                <? echo $_SESSION['danger']; 
+                    unset($_SESSION['danger']); ?>
             <? endif;?>
 
         </div>

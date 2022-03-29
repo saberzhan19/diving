@@ -46,7 +46,7 @@
             </h1>
 
             <?php if(isset($_SESSION['danger'])): ?>
-                <? redirect_to("page_login.php"); ?>
+                <? redirect_to; ?>
             <? endif;?>
 
             <?php if(isset($_SESSION['success'])): ?>

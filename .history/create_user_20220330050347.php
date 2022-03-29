@@ -1,8 +1,7 @@
 <?php 
-    
-    session_start();
-    require "functions.php";
-
+  
+  
+  require "functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -45,16 +44,10 @@
                 <i class='subheader-icon fal fa-plus-circle'></i> Добавить пользователя
             </h1>
 
-            <?php if(isset($_SESSION['danger'])): ?>
-                <? redirect_to("page_login.php"); ?>
-            <? endif;?>
 
-            <?php if(isset($_SESSION['success'])): ?>
-                <? echo display_flash_message['success']; ?>
-            <? endif;?>
 
         </div>
-        <form action="create_user.php" method="post">
+        <form action="">
             <div class="row">
                 <div class="col-xl-6">
                     <div id="panel-1" class="panel">

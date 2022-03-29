@@ -46,12 +46,8 @@
             </h1>
 
             <?php if(isset($_SESSION['danger'])): ?>
-                <? redirect_to("page_login.php"); ?>
-            <? endif;?>
+                <? echo 
 
-            <?php if(isset($_SESSION['success'])): ?>
-                <? echo display_flash_message['success']; ?>
-            <? endif;?>
 
         </div>
         <form action="create_user.php" method="post">
